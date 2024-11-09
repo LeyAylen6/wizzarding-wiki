@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Wizzarding Store</title>
+    <link rel="stylesheet" href="media/css/styles.css">
+</head>
+
+<!-- ! Pantallas: Deberá poder ajustar el contenido del sitio a 3 diferentes tipos de pantalla, 
+ TODO ver si es correcta utilizacion de carpetas y archivos !!!
+ 
+ PC (>768px); 
+ Tablet (<768px &>425px); |
+ Celulares (<425px). Pueden utilizar @media o @import según consideren más cómodo al desarrollar su proyecto 
+    
+ Multimedia: Utilizar audio o video, insertado con archivos nativos o productos de terceros.
+
+ Galería: La misma deberá contener al menos 6 elementos de productos o servicios, de acuerdo al proyecto propuesto por el/la/le alumno/a/e.
+
+ Formulario: Deberá tener relación con la finalidad del proyecto (NO simplemente un formulario de contacto). El mismo deberá redirigir a una página de agradecimiento o texto referido a la carga de esos datos; Ej: “A la brevedad nos pondremos en contacto con usted”.
+    
+ ! Los siguientes desarrollos suman nota:
+    
+ Ventanas modales (Al menos 2)
+ Animaciones (No sobrecargar al sitio de las mismas)
+ Efecto Parallax  
+ -->
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="img/nav/logo.png" alt="Harry Potter Logo">
+            <h1>WIZZARDING WIKI</h1>
+        </div>
+
+        <nav>
+            <button class="menu">☰</button>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#houses">Casas</a></li>
+                <li><a href="#characters">Personajes</a></li>
+                <li><a href="#books">Libros</a></li>
+                <li><a href="#movies">Peliculas</a></li>
+                <li><a href="#shareYourMagic">Comparte tu magia!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>- Home -</h2>
+            <article>
+                <h3>Bienvenido al Mundo Mágico de Harry Potter</h3>
+                <div class="article-container">
+                    <div class="article-text">
+                        <p>
+                            Harry Potter es una heptalogía de novelas fantásticas escrita por la autora británica <strong>J. K. Rowling</strong>, en la que se describen las aventuras del joven aprendiz de magia y hechicería Harry Potter y sus amigos Hermione Granger y Ron Weasley, durante los años que pasan en el Colegio Hogwarts de Magia y Hechicería. El argumento se centra en la lucha entre Harry Potter y el malvado mago Lord Voldemort, quien mató a los padres de Harry en su afán de conquistar al mundo mágico.
+                        </p>
+                        <p>
+                            Desde el lanzamiento de la primera novela, la serie logró una inmensa popularidad, críticas favorables y éxito comercial alrededor del mundo.El éxito de las novelas ha hecho de la marca Harry Potter una de las más exitosas del mundo.
+                        </p>
+                        <p>
+                            En 1999, la productora de cine Warner Bros. adquirió los derechos para adaptar los siete libros a una serie de ocho películas, la serie se convirtió en la franquicia más exitosa del cine en concepto de recaudaciones en taquilla.
+                        </p>
+                    </div>
+                    <figure>
+                        <img src="img/home/hogwarts.gif" alt="Hogwarts">
+                    </figure>
+                </div>
+            </article>
+        </section>
+        <section id="houses">
+            <h2>- Casas -</h2>
+            <div class="houses-description">
+                <p>
+                    Cuando los estudiantes de primer año llegan por primera vez al castillo, no van directamente al Gran Comedor para empezar el festín de bienvenida, sino que deben ir a la selección, una importante ceremonia. Los estudiantes en Hogwarts se dividen en cuatro casas, cada una con el nombre de uno de los fundadores originales de la escuela (<strong>Godric Gryffindor, Helga Hufflepuff, Rowena Ravenclaw y Salazar Slytherin</strong>, respectivamente).
+                </p>
+                <p>
+                    La ceremonia de selección en Hogwarts tiene lugar en el Gran Comedor, y todos los estudiantes así como los profesores están invitados. El Sombrero Seleccionador, canta primero una canción explicando sus funciones y describiendo las cualidades de las diferentes casas. La canción nunca es la misma, y varía de un año a otro en función de los acontecimientos
+                </p>
+                <p>
+                    Luego, cada estudiante de primer año avanza y se sienta en un taburete. La profesora McGonagall le pone el Sombrero Seleccionador, que toma unos pocos segundos o minutos para completar un breve análisis psicológico de los estudiantes y determinar sus aptitudes, a continuación, anunciando en voz alta la casa a la que pertenece el estudiante durante toda su escolaridad.
+                </p>
+                <p>
+                    Cuando encuentra dificultades para elegir una casa, es posible que el sombrero discuta con el alumno en cuestión con el fin de conocer su opinión. <strong>Esto fue lo que pasó para determinar la casa de Harry Potter</strong>. El Sombrero Seleccionador había detectado en él cualidades de Slytherin y Gryffindor, pero tras la renuencia explícita de Harry al primero, decidió mandarlo a Gryffindor. Otro caso fue con Minerva McGonagall, Filius Flitwick y Hermione Granger, que pudieron ser enviados a Gryffindor o Ravenclaw.
+                </p>
+                <p>
+                    A continuación podrás ver los valores con los que se identifica cada casa.
+                </p>
+
+                <div class="houses-container">
+                    <article>
+                        <h3>Gryffindor</h3>
+                        <figure>
+                            <img src="img/houses/gryffindor-logo.png" alt="Gryffindor">
+                        </figure>
+                        <a href="#background-gryffindor-modal">Saber más</a>
+                    </article>
+
+                    <article>
+                        <h3>Hufflepuff</h3>
+                        <figure>
+                            <img src="img/houses/hufflepuff-logo.png" alt="Hufflepuff">
+                        </figure>
+                        <a href="#background-hufflepuff-modal">Saber más</a>
+                    </article>
+
+                    <article>
+                        <h3>Slytherin</h3>
+                        <figure>
+                            <img src="img/houses/slytherin-logo.png" alt="Slytherin">
+                        </figure>
+                        <a href="#background-slytherin-modal">Saber más</a>
+                    </article>
+                    <article>
+                        <h3>Ravenclaw</h3>
+                        <figure>
+                            <img src="img/houses/ravenclaw-logo.png" alt="Ravenclaw">
+                        </figure>
+                        <a href="#background-ravenclaw-modal">Saber más</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="characters">
+            <h2>- Personajes -</h2>
+            <article class="parallax harry">
+                <div class="content">
+                    <h3>Harry Potter</h3>
+                    <p>
+                        Harry es un joven huérfano y el "Niño que vivió" tras sobrevivir a un ataque de Voldemort. Elegido por el Sombrero Seleccionador para Gryffindor, muestra valentía y lealtad a sus amigos. A lo largo de la serie, Harry se enfrenta a numerosos desafíos, pero su amor y compasión lo llevan a vencer al mal.
+                    </p>
+                </div>
+            </article>
+            
+            <article class="parallax volvemort">
+                <div class="content">
+                    <h3>Lord Voldemort </h3>
+                    <p>
+                        Voldemort, nacido como Tom Riddle, es un mago oscuro obsesionado con la inmortalidad y la pureza de la sangre. Inteligente y carismático, pero cruel, busca eliminar a los no puros y dominar el mundo mágico. Su conexión con Harry es clave para su derrota.
+                    </p>
+                </div>
+            </article>
+
+            <article class="parallax draco">
+                <div class="content">
+                    <h3>Draco Malfoy</h3>
+                    <p>
+                        Draco, miembro de la familia Malfoy y de la casa Slytherin, es arrogante y despectivo hacia los hijos de muggles. Aunque comienza como rival de Harry y simpatizante de los ideales de Voldemort, su lealtad se ve puesta a prueba. Su intento de cumplir con la misión de matar a Dumbledore revela su conflicto interno y su incapacidad para ser un verdadero asesino.
+                    </p>
+                </div>
+            </article>
+
+            <article class="parallax dumbledore">
+                <div class="content">
+                    <h3>Albus dumbledore</h3>
+                    <p>
+                        Albus Dumbledore es el sabio y compasivo director de Hogwarts, conocido por su gran poder y conocimiento. Mentor de Harry, Dumbledore guía y protege a sus estudiantes mientras busca frenar el ascenso de Voldemort. Su pasado esconde secretos que muestran su vulnerabilidad humana.
+                    </p>
+                </div>
+            </article>
+
+            <article class="parallax ron">
+                <div class="content">
+                    <h3>Ron Wasley</h3>
+                    <p>
+                        Ron es el mejor amigo de Harry y Hermione, miembro de la casa Gryffindor y proveniente de una familia mágica numerosa y humilde. Aunque a veces inseguro, su lealtad, valentía y sentido del humor lo hacen un apoyo esencial en la lucha contra Voldemort. A lo largo de la serie, Ron enfrenta sus propios miedos y demuestra un profundo compromiso con sus amigos y el bien común.
+                    </p>
+                </div>
+            </article>
+            <article class="parallax luna">
+                <div class="content">
+                    <h3>Luna Lovegood
+                    </h3>
+                    <p>
+                        Luna es una bruja peculiar y soñadora de la casa Ravenclaw. Es conocida por su perspectiva única, su honestidad y su apariencia inusual. Aunque a veces es vista como excéntrica, Luna muestra una gran valentía y una amistad inquebrantable con Harry y sus amigos. Su lealtad y capacidad para ver el mundo de una manera diferente la convierten en un personaje entrañable.
+                    </p>
+                </div>
+            </article>
+            <article class="parallax hermione">
+                <div class="content">
+                    <h3>Hermione Granger</h3>
+                    <p>
+                        Hermione es una de las estudiantes más inteligentes de Hogwarts y la mejor amiga de Harry y Ron. Proveniente de una familia muggle, es determinada y destaca por su pasión por el conocimiento y su dominio de la magia. Su sentido de justicia y su ingenio la llevan a ser fundamental en la lucha contra Voldemort, mostrando tanto valentía como compasión.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section id="books">
+            <h2>- Libros -</h2>
+                <article>
+                    <h3>Galeria de Libros</h3>
+
+                    <ul>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-piedra-filosofal.jpg" alt="Harry Potter y la piedra filosofal">
+                                <figcaption>Harry Potter y la piedra filosofal</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-la-camara-de-los-secretos.jpg" alt="Harry Potter y la cámara de los secretos">
+                                <figcaption>Harry Potter y la cámara de los secretos</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-prisionero-de-azkaban.jpg" alt="Harry Potter y el pricionero de Askaban">
+                                <figcaption>Harry Potter y el pricionero de Askaban</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-caliz-de-fuego.jpg" alt="Harry Potter y cáliz de fuego">
+                                <figcaption>Harry Potter y cáliz de fuego</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-la-orden-del-fenix.jpg" alt="Harry Potter y cáliz de fuego">
+                                <figcaption>Harry Potter y cáliz de fuego</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-el-principe-mestizo.jpg" alt="Harry Potter y el principe mestizo">
+                                <figcaption>Harry Potter y el principe mestizo</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-las-reliquias-de-la-muerte.jpg" alt="Harry Potter y las reliquias de la muerte">
+                                <figcaption>Harry Potter y las reliquias de la muerte</figcaption>
+                            </figure>
+                        </li>
+                        <li>
+                            <figure>
+                                <img src="img/books/libro-el-legado-maldito.jpg" alt="Harry Potter y el legado maldito">
+                                <figcaption>Harry Potter y el legado maldito</figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                </article>
+        </section>
+        <section id="movies">
+            <h2>- Peliculas -</h2>
+                <article>
+                    <h3>Trailers Oficiales</h3>
+
+                    <ul>
+                        <li>
+                            <iframe width="500" height="300" 
+                                src="https://www.youtube.com/embed/ZgrCZVjPg9g" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y la piedra filosofal</p>
+                        </li>
+                        <li>
+                            <iframe width="500" height="300" 
+                                src="https://www.youtube.com/embed/MziLH3uow6E" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y la cámara secreta</p>
+                        </li>
+                        <li>
+                            <iframe width="500" height="300"
+                                src="https://www.youtube.com/embed/cUtaBkW1MKo" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y el prisionero de Azkaban</p>
+                        </li>
+                        <li>
+                            <iframe width="500" height="300"
+                                src="https://www.youtube.com/embed/wX5dWfUKGPg"
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y el Cáliz de fuego</p>
+                        </li>
+                        <li>
+                            <iframe width="500" height="300"
+                                src="https://www.youtube.com/embed/jdEulcjAvQI" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y la Orden del Fénix</p>
+                        </li>
+                        <li>
+                            <iframe width="500" height="300"
+                                src="https://www.youtube.com/embed/CHiGk9bEht8" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y el misterio del príncipe</p>
+                        </li>
+                        <li>
+                            <iframe width="500" height="300"
+                                src="https://www.youtube.com/embed/GdNvFDzSNHQ" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y las reliquias de la muerte Parte 1</p>
+                        </li>
+                        <li>
+                            <iframe
+                                src="https://www.youtube.com/embed/7Ay2BjeZvrM" 
+                                title="YouTube video player" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                >
+                            </iframe>
+                            <p>Harry Potter y las reliquias de la muerte Parte 2</p>
+                        </li>
+                    </ul>
+                </article>
+        </section>
+        <section id="shareYourMagic">
+            <h2>Comparte tu magia</h2>
+
+            <p><strong>¡Tu turno para hacer magia!</strong></p>
+            <p>¿Tienes un personaje de Harry Potter que amas o quieres agregar uno nuevo a nuestra lista?</p>
+            <p>¡Este es el lugar perfecto para hacerlo! Comparte con nosotros quién es tu favorito o sube una
+                descripción de algún personaje que aún no hemos incluido.</p>
+            <p>¡Deja tu huella en el mundo mágico y ayúdanos a hacerlo aún más grande!</p>
+
+            <form action="message.html" method="get" enctype="multipart/form-data">
+                <div class="data-question">
+                    <fieldset class="principal-fieldset">
+                        <legend>Contanos sobre vos</legend>
+                        <div>
+                            <label for="name">Nombre</label>
+                            <input id="name" type="text" name="name" placeholder="Leila" class="input">
+                        </div>
+
+                        <div>
+                            <label for="lastname">Apellido</label>
+                            <input id="lastname" type="text" name="lastname" placeholder="Salguero" class="input">
+                        </div>
+
+                        <div>
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="ejemplo@email.com" class="input">
+                        </div>
+
+                        <fieldset class="gender-fieldset">
+                            <legend>Género</legend>
+                            <div>
+                                <input id="female" type="radio" name="gender" value="female">
+                                <label for="female">Femenino</label>
+                            </div>
+                            <div>
+                                <input id="male" type="radio" name="gender" value="male">
+                                <label for="male">Masculino</label>
+                            </div>
+                            <div>
+                                <input id="other" type="radio" name="gender" value="other">
+                                <label for="other">Otro</label>
+                            </div>
+
+                        </fieldset>
+
+                    </fieldset>
+
+                    <fieldset class="principal-fieldset">
+                        <legend>Tu Aporte</legend>
+                        <div>
+                            <label for="character">Personaje</label>
+                            <input id="character" type="text" name="character" placeholder="Ron Wasley" class="input">
+                        </div>
+                        <div>
+                            <label for="textArea">descripción</label>
+                            <textarea id="textArea" name="textArea" cols="20" rows="7"></textarea>
+                        </div>
+                        <div>
+                            <label for="file">Subí una imágen</label>
+                            <input id="file" type="file" name="file" class="file">
+                        </div>
+                    </fieldset>
+                </div>
+
+                <input id="submit" type="submit" value="Enviar">
+            </form>
+        </section>
+
+        <div id="background-gryffindor-modal" class="background-modal">
+            <div class="modal">
+                <header class="header-modal gryffindor">
+                    <a href="#houses" title="Cerrar">X</a>
+                    <h1>- Gryffindor -</h1>
+                </header>
+                <main>
+                    <section>
+                        <article>
+                            <p>
+                                <strong>Características principales:</strong> Coraje, valentía, determinación, y un fuerte sentido de la justicia.
+                            </p>
+                            <p>
+                                <strong>Valores:</strong> Gryffindor valora a aquellos que son valientes y están dispuestos a enfrentarse al peligro para proteger a los demás o defender lo que creen correcto.
+                            </p>
+                        </article>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <div id="background-ravenclaw-modal" class="background-modal">
+            
+            <div class="modal">
+                <header class="header-modal ravenclaw">
+                    <a href="#houses" title="Cerrar">X</a>
+                    <h1>- Ravenclaw -</h1>
+                </header>
+                <main>
+                    <section>
+                        <article>
+                            <p>
+                                <strong>Características principales:</strong> Lealtad, paciencia, honestidad, y trabajo duro.
+                            </p>
+                            <p>
+                                <strong>Valores:</strong> Hufflepuff valora a aquellos que son justos, amigables, y no buscan la gloria o el reconocimiento, sino que prefieren hacer el bien y ayudar a los demás.
+                            </p>
+                        </article>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+        <div id="background-slytherin-modal" class="background-modal">
+            <div class="modal">
+                <header class="header-modal slytherin">
+                    <a href="#houses" title="Cerrar">X</a>
+                    <h1>- Slytherin -</h1>
+                </header>
+                <main>
+                    <section>
+                        <article>
+                            <p>
+                                <strong>Características principales:</strong> Ambición, astucia, determinación, y liderazgo.
+                            </p>
+                            <p>
+                                <strong>Valores:</strong> Slytherin valora a aquellos que son astutos y están dispuestos a hacer lo que sea necesario para alcanzar sus metas, incluso si eso significa tomar decisiones difíciles.
+                            </p>
+                        </article>
+                    </section>
+                </main>
+            </div>
+        </div>
+        
+        <div id="background-hufflepuff-modal" class="background-modal">
+            <div class="modal">
+                <header class="header-modal hufflepuff">
+                    <a href="#houses" title="Cerrar">X</a>
+                    <h1>- Hufflepuff -</h1>
+                </header>
+                <main>
+                    <section>
+                        <article>
+                            <p>
+                                <strong>Características principales:</strong> Inteligencia, sabiduría, creatividad, y amor por el conocimiento.
+                            </p>
+                            <p>
+                                <strong>Valores:</strong> Ravenclaw valora a aquellos que son intelectualmente curiosos y buscan aprender por el placer de aprender.
+                            </p>
+                        </article>
+                    </section>
+                </main>
+            </div>
+        </div>
+
+    </main>
+    <footer id="footer">
+        <p>
+            <strong>- WIZZARDING WIKI -</strong>
+        </p>
+    
+        <section id="social-web">
+            <h4>Redes Sociales :</h4>
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/leilaaylensalguero" target="_blank">
+                        <img src="img/footer/linkedin-logo.svg" alt="Linkedin" class="linkedin">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/LeyAylen6" target="_blank">
+                        <img src="img/footer/github-logo.svg" alt="Github" class="github">
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+</body>
+
+</html>

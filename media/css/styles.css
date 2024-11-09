@@ -1,0 +1,812 @@
+@font-face {
+    font-family: "Popins italic";
+    src: url("../css/fonts/Poppins/Poppins-LightItalic.ttf");
+}
+
+@font-face {
+    font-family: "MedievalSharp";
+    src: url("../css/fonts/MedievalSharp/MedievalSharp-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    font-size: 18px;
+    font-family: "Popins italic";
+    background-color: rgb(63, 61, 61);
+    color: white;
+    min-width: 300px;
+    width: 100%;
+}
+
+h1 {
+    color: black;
+    font-size: 30px;
+    font-family: "MedievalSharp";
+    margin: 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: #f1cb4e;
+    font-size: 40px;
+    font-family: "MedievalSharp";
+}
+
+h3 {
+    text-align: center;
+    font-size: 35px;
+    color: #f1cb4e;
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.6);
+    font-family: "MedievalSharp";
+}
+
+h4 {
+    font-size: 18px;
+}
+
+header {
+    background-image: url(../../img/nav/gold-background.jpg);
+    background-repeat: cover;
+    font-family: "MedievalSharp";
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    animation: descendToBottom 4s forwards;
+    border-bottom: 8px solid rgb(0, 0, 0);
+}
+
+.logo {
+    height: 100px;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav button {
+    display: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 20px;
+    width: 20%;
+}
+
+nav ul li a {
+    padding: 10px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    background-color: #fff0bd;
+    color: rgb(72, 72, 72);
+    border-radius: 20px;
+}
+
+@keyframes descendToBottom {
+    0% {
+        transform: translateY(-200px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    } 
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    } 
+}
+
+/* ! Section: Home */
+#home, 
+#home article {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.article-container {
+    width: 90%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.article-container figure {
+    animation: show 10s forwards;
+    width: 35%;
+}
+
+.article-text {
+    padding-top: 70px;
+    width: 65%;
+}
+
+.article-container figure img {
+    width: 100%;
+}
+
+/* ! Section: Houses */
+#houses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.houses-description {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.houses-container {
+    width: 95%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    gap: 20px;
+}
+
+.houses-container h3 {
+    margin-bottom: 0;
+}
+
+.houses-container p {
+    width: 100%;
+}
+
+#houses article {
+    width: 350px;
+    height: 400px;
+    background-color: rgb(254, 254, 254);
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px #f5d467;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#houses article:hover {
+    transform: scale(1.02);
+    transition-duration: .5s;
+    cursor: pointer;
+}
+
+#houses article figure {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 60%;
+}
+
+#houses article figure img {
+    transform: scale(.8);
+}
+
+#houses article ul {
+    margin: 20px;
+}
+
+.houses-container article a {
+    background-color: #f1cb4e;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);;
+    border-radius: 20px;
+    font-size: 18px;
+    padding: 10px 30px 10px 30px;
+    box-shadow: 2px 4px 2px rgb(62, 62, 62);
+}
+
+.houses-container article a:hover {
+    background-color: #ffe282;
+}
+
+.background-modal {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0; 
+}
+
+#background-hufflepuff-modal:target,
+#background-gryffindor-modal:target,
+#background-ravenclaw-modal:target,
+#background-slytherin-modal:target {
+    display: block;
+}
+
+.header-modal {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    border-radius: 20px;
+    animation: none;
+}
+
+.header-modal h1 {
+    width: 80%;
+    font-size: 25px;
+}
+
+.header-modal a {
+    background: rgb(0, 0, 0);
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+    padding: 5px 13px 5px 13px;
+    border-radius: 50%;
+}
+
+.modal {
+    background-color: rgb(255, 255, 255);
+    width: 35%;
+    height: auto;
+    border-radius: 20px;
+    color: black;
+    box-shadow: 2px 4px 10px rgb(37, 37, 37);
+    padding: 10px;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.gryffindor {
+    background: red;
+}
+
+.ravenclaw {
+    background: rgb(75, 129, 255);
+}
+
+.slytherin {
+    background: rgb(7, 192, 0);
+}
+
+.hufflepuff {
+    background: rgb(255, 196, 0);
+}
+
+/* ! Section: Characters */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.parallax:nth-child(odd) {
+    justify-content: end;
+}
+
+.content {
+    width: 700px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    line-height: 1.7;
+    padding: 50px;
+}
+
+.content h3 {
+    margin: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.harry {
+    background-image: url(../../img/characters/harry-potter.jpg);
+}
+
+.volvemort {
+    background-image: url(../../img/characters/lord-voldemort.jpg);
+}
+
+.draco {
+    background-image: url(../../img/characters/draco-malfoy.jpg);
+}
+
+.dumbledore {
+    background-image: url(../../img/characters/albus-dumbledore.jpg);
+}
+
+.hermione {
+    background-image: url(../../img/characters/hermione-granger.jpg);
+}
+
+.ron {
+    background-image: url(../../img/characters/ron-weasley.jpg);
+}
+
+.luna {
+    background-image: url(../../img/characters/luna-lovegood.jpg);
+}
+
+/* ! Section: Contact */
+#shareYourMagic {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.data-question {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.principal-fieldset {
+    width: 45%;
+    margin-bottom: 20px
+}
+
+.principal-fieldset>div {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    border-color: #f1cb4e;
+    border-radius: 20px;
+}
+
+fieldset legend {
+    color: #f1cb4e;
+    font-weight: bold;
+}
+
+.gender-fieldset {
+    margin: 20px;
+}
+
+.input {
+    font-size: 18px;
+    padding-left: 10px;
+    background-color: rgb(255, 241, 204);
+    border-radius: 10px;
+    height: 40px;
+    border: none;
+    width: 100%;
+    box-shadow: .2px .2px 5px rgb(142, 142, 142);
+}
+
+textarea {
+    font-size: 18px;
+    width: 100%;
+    padding-left: 10px;
+    background-color: rgb(255, 241, 204);
+    border-radius: 10px;
+    border: none;
+    box-shadow: .2px .2px 5px rgb(142, 142, 142);
+}
+
+.file {
+    margin-top: 15px;
+    width: 130px;
+    border-radius: 10px;
+}
+
+#submit {
+    height: 40px;
+    width: 200px;
+    background-color: #f1cb4e;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* ! Section: Books */
+#books article ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px
+}
+
+#books article ul li {
+    list-style: none;
+    margin: 0;
+}
+
+#books article ul li figure {
+    padding-bottom: 30px;
+    width: min-content;
+    margin: 0;
+}
+
+#books article ul li figure img {
+    height: 430px;
+    width: 320px;
+}
+
+/* ! Section: Movies */
+#movies article ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+}
+
+#movies article ul li {
+    list-style: none;
+    width: min-content;
+}
+
+#movies article ul li p {
+    margin: 0;
+}
+
+iframe {
+    width: 500px;
+    height: 300px;
+}
+
+/* ! Section: Footer */
+#footer {
+    background-color: black;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer p {
+    font-family: "MedievalSharp";
+    font-size: 28px;
+}
+
+#social-web {
+   width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: end;
+}
+
+#social-web ul li {
+    display: inline;
+}
+
+.linkedin {
+    height: 70px;
+}
+
+.github {
+    padding-bottom: 10px;
+    height: 50px;
+}
+
+/* ? Extra */
+@media screen and (max-width: 950px) {
+
+    /* ! Section: Home */
+    .article-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .article-container figure {
+        width: 90%;
+    }
+    
+    .article-text {
+        padding: 0;
+        width: 90%;
+    }
+
+    .modal {
+        width: 80%;
+    }
+}
+
+/* ? Tablet */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 35px;
+    }
+    
+    h3 {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 16px;
+    }
+
+    figcaption {
+        font-size: 15px;
+    }
+
+    header {
+        padding-top: 0;
+        padding-bottom: 0;
+        height: 100px;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo {
+        height: 50px;
+    }
+
+    nav {
+        width: 30%;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav button {
+        display: block;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.2);
+        width: 70px;
+        height: 70%;
+        font-size: 35px;
+        border-radius: 50%;
+    }
+
+    /* ! Section: Home */
+    article h3 {
+        width: 90%;
+    }
+
+    .article-container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .article-container figure {
+        width: 90%;
+    }
+
+    .article-text {
+        width: 90%;
+        padding: 0;
+    }
+
+    /* ! Section: Books */
+    #books article ul {
+        gap: 20px;
+    }
+
+    #books article ul li figure img {
+        width: 200px;
+        height: 300px;
+    }
+
+    /* ! Section: Movies */
+    #movies article h3{
+        width: 100%;
+    }
+    
+    #movies article ul {
+        gap: 20px;
+    }
+
+    iframe {
+        width: 250px;
+        height: 150px;
+    }
+
+    /* ! Section: Contact */
+    
+    .data-question {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .principal-fieldset {
+        width: 90%;
+        height: auto;
+    }
+    
+    .input, 
+    label {
+        font-size: 15px;
+    }
+
+    /* ! Section: Footer */
+
+    #footer {
+        display: flex;
+        flex-direction: column;
+        height: 2%;
+    }
+
+    #social-web {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .linkedin {
+        height: 60px;
+    }
+
+    .github {
+        height: 40px;
+    } 
+
+    /* Modal */
+    .header-modal a {
+        font-size: 15px;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .header-modal h1 {
+        font-size: 20px;
+    }
+}
+
+/* ? Mobile */
+@media screen and (max-width: 425px) {
+    h1 {
+        font-size: 18px;
+    }
+    
+    h2 {
+        font-size: 25px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 15px;
+    }
+
+    figcaption {
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 15px;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    nav button {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+    
+    /* ! Section: Houses */
+     
+    #houses article {
+        height: auto;
+        margin: 0;
+    }
+    
+    #houses article figure {
+        height: 200px;
+        width: 100%;
+    }
+
+    /* ! Section: Characters */
+
+    #characters h2 {
+        padding-top: 40px;
+    }
+
+    .parallax {
+        width: 100%;
+        padding: 0;
+    }
+
+    .content {
+        width: 100%;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    /* ! Section: Contact */
+    
+    /* .data-question {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .principal-fieldset {
+        width: 90%;
+    } */
+
+    .principal-fieldset {
+        width: 90%;
+        height: auto;
+    }
+    
+    /* ! Section: Footer */
+
+    #footer p {
+        font-size: 20px;
+    }
+    
+    #social-web, 
+    #social-web ul {
+       width: 100%;
+    }
+
+    #social-web, 
+    #social-web li {
+        padding-left: 10%;
+    }
+    
+    #social-web h4 {
+        display: none;
+    }
+
+    .houses-container article a {
+        font-size: 12px;
+    }
+}
+
