@@ -45,7 +45,7 @@ h4 {
     font-size: 18px;
 }
 
-header {
+body > header {
     background-image: url(../../img/nav/gold-background.jpg);
     background-repeat: cover;
     font-family: "MedievalSharp";
@@ -84,6 +84,7 @@ nav ul li a {
     font-size: 25px;
     text-decoration: none;
     color: black;
+    line-height: 3
 }
 
 nav ul li a:hover {
@@ -128,12 +129,11 @@ nav ul li a:hover {
 }
 
 .article-container figure {
-    animation: show 10s forwards;
+    animation: show 12s forwards;
     width: 35%;
 }
 
 .article-text {
-    padding-top: 70px;
     width: 65%;
 }
 
@@ -161,6 +161,7 @@ nav ul li a:hover {
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     color: black;
     gap: 20px;
 }
@@ -175,7 +176,7 @@ nav ul li a:hover {
 
 #houses article {
     width: 350px;
-    height: 400px;
+    height: 350px;
     background-color: rgb(254, 254, 254);
     border-radius: 20px;
     box-shadow: 2px 2px 10px #f5d467;
@@ -237,15 +238,13 @@ nav ul li a:hover {
 }
 
 .header-modal {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 10px solid black;
     border-radius: 20px;
-    animation: none;
+    text-align: center;
 }
 
 .header-modal h1 {
-    width: 80%;
     font-size: 25px;
 }
 
@@ -265,9 +264,30 @@ nav ul li a:hover {
     border-radius: 20px;
     color: black;
     box-shadow: 2px 4px 10px rgb(37, 37, 37);
-    padding: 10px;
+    padding: 20px;
     margin: auto;
     margin-top: 150px;
+}
+
+.modal h2 {
+    color: black;
+    font-size: 25px;
+    text-align: start;
+}
+
+.background-modal footer {
+    text-align: center;
+}
+
+.button-modal {
+    padding: 8px 40px 8px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.button-modal:hover {
+    opacity: .8;
 }
 
 .gryffindor {
@@ -314,17 +334,6 @@ nav ul li a:hover {
 
 .content h3 {
     margin: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .harry {
@@ -445,7 +454,8 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 40px
+    gap: 40px;
+    padding: 0;
 }
 
 #books article ul li {
@@ -465,6 +475,10 @@ textarea {
 }
 
 /* ! Section: Movies */
+#movies {
+    padding: 20px;
+}
+
 #movies article ul {
     display: flex;
     flex-wrap: wrap;
@@ -485,6 +499,7 @@ textarea {
 iframe {
     width: 500px;
     height: 300px;
+    border: none /* Reemplaza al Frameborder de html. */
 }
 
 /* ! Section: Footer */
@@ -509,6 +524,10 @@ iframe {
    justify-content: end;
 }
 
+#social-web ul  {
+    padding: 0;
+}
+
 #social-web ul li {
     display: inline;
 }
@@ -525,6 +544,15 @@ iframe {
 /* ? Extra */
 @media screen and (max-width: 950px) {
 
+    h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 70px;
+    }
+
     /* ! Section: Home */
     .article-container {
         display: flex;
@@ -540,6 +568,7 @@ iframe {
         width: 90%;
     }
 
+    /* Modal */
     .modal {
         width: 80%;
     }
@@ -576,7 +605,7 @@ iframe {
         font-size: 15px;
     }
 
-    header {
+    body > header {
         padding-top: 0;
         padding-bottom: 0;
         height: 100px;
@@ -590,8 +619,9 @@ iframe {
         height: 50px;
     }
 
-    nav {
-        width: 30%;
+    .menu {
+        width: 60px;
+        height: 60px;
     }
 
     nav ul {
@@ -744,7 +774,7 @@ iframe {
      
     #houses article {
         height: auto;
-        margin: 0;
+        padding-bottom: 30px
     }
     
     #houses article figure {
@@ -752,12 +782,11 @@ iframe {
         width: 100%;
     }
 
-    /* ! Section: Characters */
-
-    #characters h2 {
-        padding-top: 40px;
+    .modal h2 {
+        font-size: 18px;
     }
 
+    /* ! Section: Characters */
     .parallax {
         width: 100%;
         padding: 0;
@@ -770,15 +799,6 @@ iframe {
     }
 
     /* ! Section: Contact */
-    
-    /* .data-question {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .principal-fieldset {
-        width: 90%;
-    } */
 
     .principal-fieldset {
         width: 90%;
@@ -793,14 +813,16 @@ iframe {
     
     #social-web, 
     #social-web ul {
-       width: 100%;
-    }
-
-    #social-web, 
-    #social-web li {
-        padding-left: 10%;
+       width: 90%;
+       padding: 0 !important;
+       display: flex;
+       justify-content: space-evenly;
     }
     
+    .github {
+        padding-top: 10px;
+    }
+
     #social-web h4 {
         display: none;
     }
